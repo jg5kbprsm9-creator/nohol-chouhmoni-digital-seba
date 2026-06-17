@@ -72,8 +72,28 @@ button:hover{
 </div>
 <script>
 let reports = [];
-
+<script>
 function submitReport(){
+  let title = document.getElementById("title").value;
+  let desc = document.getElementById("desc").value;
+
+  db.collection("reports").add({
+    title: title,
+    description: desc,
+    status: "pending",
+    time: new Date().toLocaleString()
+  })
+  .then(() => {
+    alert("রিপোর্ট জমা হয়েছে ✔️");
+    document.getElementById("title").value = "";
+    document.getElementById("desc").value = "";
+    document.getElementById("formBox").style.display = "none";
+  })
+  .catch((error) => {
+    alert("সমস্যা হয়েছে: " + error);
+  });
+}
+</script>
   let title = document.getElementById("title").value;
   let desc = document.getElementById("desc").value;
 
