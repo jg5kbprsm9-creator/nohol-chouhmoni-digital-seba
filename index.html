@@ -70,6 +70,19 @@ button:hover{
   <h3>📢 সচেতনতা</h3>
   <p>মাদক মুক্ত সমাজ গড়তে সবাইকে এগিয়ে আসতে হবে</p>
 </div>
+<script>
+let reports = [];
 
+function submitReport(){
+  let title = document.getElementById("title").value;
+  let desc = document.getElementById("desc").value;
+
+  reports.push(title + " - " + desc);
+
+  alert("রিপোর্ট জমা হয়েছে ✔️");
+
+  console.log(reports);
+}
+</script>
 </body>
 </html>
