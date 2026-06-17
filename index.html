@@ -82,7 +82,56 @@ button:hover{
 </style>
 
 </head>
+<style>
+body{
+  font-family: Arial;
+  margin:0;
+  background:#f4f6f9;
+}
 
+header{
+  background:linear-gradient(90deg,#0077ff,#00c6ff);
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+.menu{
+  text-align:center;
+  background:white;
+  padding:10px;
+}
+
+.menu a{
+  text-decoration:none;
+  margin:0 10px;
+  color:#0077ff;
+  font-weight:bold;
+}
+
+.card{
+  background:white;
+  margin:15px;
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+  text-align:center;
+}
+
+button{
+  background:#0077ff;
+  color:white;
+  padding:10px 15px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#005bcc;
+}
+</style>
+  
 <body>
 
 <header>
@@ -143,7 +192,17 @@ function submitReport(){
   console.log(reports);
 }
 </script>
-</body>
+<header>
+  <h2>নহল চৌহমুনি ডিজিটাল সেবা</h2>
+  <p>গ্রামের সকল তথ্য ও অভিযোগ কেন্দ্র</p>
+</header>
+
+<div class="menu">
+  <a href="index.html">হোম</a>
+  <a href="emergency.html">জরুরি সেবা</a>
+  <a href="admin.html">এডমিন</a>
+</div>
+  </body>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
 
